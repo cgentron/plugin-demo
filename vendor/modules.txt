@@ -1,0 +1,10 @@
+# github.com/katallaxie/protoc-gen-cloud-proxy v0.0.0-20201217143949-73ec77b9b01f
+## explicit
+github.com/katallaxie/protoc-gen-cloud-proxy/pkg/resolvers
+# github.com/mitchellh/mapstructure v1.1.2
+github.com/mitchellh/mapstructure
+# github.com/traefik/yaegi v0.9.8
+github.com/traefik/yaegi/interp
+github.com/traefik/yaegi/stdlib
+# gopkg.in/yaml.v3 v3.0.0-20200615113413-eeeca48fe776
+gopkg.in/yaml.v3
