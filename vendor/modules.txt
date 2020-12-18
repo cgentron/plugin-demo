@@ -1,10 +1,3 @@
-# github.com/cgentron/api v0.0.0-20201218124750-1bf4fb81fc56
+# github.com/cgentron/api v0.0.0-20201218130507-cf3a90cbca70
 ## explicit
-github.com/cgentron/api/resolvers
-# github.com/mitchellh/mapstructure v1.4.0
-github.com/mitchellh/mapstructure
-# github.com/traefik/yaegi v0.9.8
-github.com/traefik/yaegi/interp
-github.com/traefik/yaegi/stdlib
-# gopkg.in/yaml.v3 v3.0.0-20200615113413-eeeca48fe776
-gopkg.in/yaml.v3
+github.com/cgentron/api/iface

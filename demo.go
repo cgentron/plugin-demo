@@ -3,7 +3,7 @@ package plugindemo
 import (
 	"context"
 
-	"github.com/cgentron/api/resolvers"
+	"github.com/cgentron/api/iface"
 )
 
 // Config ...
@@ -20,7 +20,7 @@ type Demo struct {
 }
 
 // New ...
-func New(config *Config, name string) (resolvers.ResolverHandler, error) {
+func New(config *Config, name string) (iface.ResolverHandler, error) {
 	return &Demo{
 		name: name,
 	}, nil
