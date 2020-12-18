@@ -3,4 +3,4 @@ description: '[Demo] just loopback message'
 
 type: resolver
 
-import: github.com/cgentron/plugin-demo
+import: github.com/cgentron/plugindemo
