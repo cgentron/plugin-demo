@@ -3,7 +3,7 @@ package plugindemo
 import (
 	"context"
 
-	"github.com/katallaxie/protoc-gen-cloud-proxy/pkg/resolvers"
+	"github.com/cgentron/api/resolvers"
 )
 
 // Config ...

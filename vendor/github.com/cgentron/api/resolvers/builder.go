@@ -32,13 +32,10 @@ type DevPlugin struct {
 
 // Manifest The plugin manifest.
 type Manifest struct {
-	DisplayName   string                 `yaml:"displayName"`
-	Type          string                 `yaml:"type"`
-	Import        string                 `yaml:"import"`
-	BasePkg       string                 `yaml:"basePkg"`
-	Compatibility string                 `yaml:"compatibility"`
-	Summary       string                 `yaml:"summary"`
-	TestData      map[string]interface{} `yaml:"testData"`
+	Name        string `yaml:"name"`
+	Type        string `yaml:"type"`
+	Import      string `yaml:"import"`
+	Description string `yaml:"summary"`
 }
 
 // Constructor ...
@@ -80,6 +77,8 @@ func NewBuilder(client *Client, resolvers map[string]Descriptor) (*Builder, erro
 		i := interp.New(interp.Options{GoPath: client.GoPath()})
 		i.Use(stdlib.Symbols)
 
+		fmt.Println(client.GoPath())
+
 		_, err = i.Eval(fmt.Sprintf(`import "%s"`, manifest.Import))
 		if err != nil {
 			return nil, fmt.Errorf("%s: failed to import plugin code %q: %w", desc.ModuleName, manifest.Import, err)
@@ -89,7 +88,6 @@ func NewBuilder(client *Client, resolvers map[string]Descriptor) (*Builder, erro
 			interpreter: i,
 			GoPath:      client.GoPath(),
 			Import:      manifest.Import,
-			BasePkg:     manifest.BasePkg,
 		}
 	}
 
