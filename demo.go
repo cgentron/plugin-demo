@@ -27,5 +27,5 @@ func New(config *Config, name string) (iface.ResolverHandler, error) {
 }
 
 func (a *Demo) Resolve(context context.Context, msg []byte) ([]byte, error) {
-	return []byte{}, nil
+	return []byte("demo"), nil
 }
